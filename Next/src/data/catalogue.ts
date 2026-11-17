@@ -1,14 +1,9 @@
-// Single source of truth for all sofa data and pricing.
-// Prices and adjustments come from the assignment brief (B1) and Figma;
-// all amounts are stored as plain numbers (rupees) and formatted at render time.
-
-export type ModelId = "luna" | "urban" | "cloud";
-export type ColourId = string;
+﻿export type ModelId = "luna" | "urban" | "cloud";
 export type FabricId = "linen" | "velvet" | "leatherette";
 export type SeatingId = "two-seater" | "three-seater" | "l-shape";
 
 export interface ColourOption {
-  id: ColourId;
+  id: string;
   label: string;
   shortLabel: string;
   hex: string;
@@ -45,6 +40,41 @@ export interface SofaModel {
   image: string;
   colours: ColourOption[];
 }
+
+export interface CustomiserConfig {
+  modelId: ModelId;
+  colourId: string;
+  fabricId: FabricId;
+  seatingId: SeatingId;
+}
+
+export interface PriceBreakdown {
+  total: number;
+  base: number;
+  fabricAdj: number;
+  seatingAdj: number;
+}
+
+export const getModel = (id: ModelId): SofaModel => SOFA_MODELS.find((m) => m.id === id)!;
+
+export const getFabric = (id: FabricId): FabricOption => FABRICS.find((f) => f.id === id)!;
+
+export const getSeating = (id: SeatingId): SeatingOption => SEATING.find((s) => s.id === id)!;
+
+export const getColour = (model: SofaModel, colourId: string): ColourOption => model.colours.find((c) => c.id === colourId)!;
+
+export const calculatePrice = (config: CustomiserConfig): PriceBreakdown => {
+  const model = SOFA_MODELS.find((m) => m.id === config.modelId)!;
+  let price = model.basePrice;
+  const fabric = FABRICS.find((f) => f.id === config.fabricId)!;
+  const seating = SEATING.find((s) => s.id === config.seatingId)!;
+  price += fabric.adjustment + seating.adjustment;
+  return { total: price, base: model.basePrice, fabricAdj: fabric.adjustment, seatingAdj: seating.adjustment };
+};
+
+export const formatAdjustment = (adjustment: number): string => adjustment >= 0 ? `+₹${adjustment}` : `−₹${Math.abs(adjustment)}`;
+
+export const formatPrice = (price: number): string => `\u20B9${price.toLocaleString("en-IN")}`;
 
 export const SOFA_MODELS: SofaModel[] = [
   {
@@ -160,62 +190,9 @@ export const SEATING: SeatingOption[] = [
   },
 ];
 
-export interface CustomiserConfig {
-  modelId: ModelId;
-  colourId: ColourId;
-  fabricId: FabricId;
-  seatingId: SeatingId;
-}
-
 export const DEFAULT_CONFIG: CustomiserConfig = {
   modelId: "luna",
   colourId: "beige",
   fabricId: "linen",
   seatingId: "three-seater",
 };
-
-export function getModel(id: ModelId): SofaModel {
-  return SOFA_MODELS.find((model) => model.id === id) ?? SOFA_MODELS[0];
-}
-
-export function getFabric(id: FabricId): FabricOption {
-  return FABRICS.find((fabric) => fabric.id === id) ?? FABRICS[0];
-}
-
-export function getSeating(id: SeatingId): SeatingOption {
-  return SEATING.find((seating) => seating.id === id) ?? SEATING[0];
-}
-
-export function getColour(
-  model: SofaModel,
-  colourId: ColourId
-): ColourOption | undefined {
-  return model.colours.find((colour) => colour.id === colourId);
-}
-
-export function calculatePrice(config: CustomiserConfig): {
-  base: number;
-  fabricAdj: number;
-  seatingAdj: number;
-  total: number;
-} {
-  const model = getModel(config.modelId);
-  const fabricAdj = getFabric(config.fabricId).adjustment;
-  const seatingAdj = getSeating(config.seatingId).adjustment;
-  return {
-    base: model.basePrice,
-    fabricAdj,
-    seatingAdj,
-    total: model.basePrice + fabricAdj + seatingAdj,
-  };
-}
-
-// Formats rupees with Indian digit grouping, e.g. 42999 -> "₹42,999"
-export function formatPrice(value: number): string {
-  return `₹${value.toLocaleString("en-IN")}`;
-}
-
-// Formats a signed adjustment, e.g. 5000 -> "+₹5,000", 0 -> "+₹0"
-export function formatAdjustment(value: number): string {
-  return `+₹${value.toLocaleString("en-IN")}`;
-}

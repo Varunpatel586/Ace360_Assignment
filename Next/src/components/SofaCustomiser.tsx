@@ -56,14 +56,13 @@ export default function SofaCustomiser({
     <section className={styles.section} id="customiser">
       <div className={styles.header}>
         <div className={styles.badgePill}>
-          <Image src="/images/icon-badge-5.svg" alt="" width={7} height={12} />
-          <span>Personalise Your Piece</span>
+          <Image src="/images/icon-badge-6.svg" alt="" width={7} height={12} />
+          <span>LIVE SPECIFICATION STUDIO</span>
         </div>
-        <h2 className={styles.heading}>Build Your Bespoke Sofa</h2>
+        <h2 className={styles.heading}>Tailor Your Living Centerpiece</h2>
         <p className={styles.subheading}>
-          Four deliberate choices — silhouette, colour, fabric and footprint.
-          Every selection updates your live specification and artisan estimate
-          instantly.
+          Select your architecture, tone, upholstery, and seating scale. Observe instant recalculation and seamless
+          synchronization with our craftsmen.
         </p>
       </div>
 

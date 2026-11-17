@@ -1,99 +1,107 @@
-/* Enquiry form — off-white panel, brown labels, live config summary card. */
+/* Enquiry form: centred 768px white card, 48px padding, pill inputs on #FCF9F3. */
 
 .section {
-  padding: var(--gap-section) var(--pad-container);
-  background: var(--bg-light);
+  width: 100%;
+  padding: 112px 0 0;
 }
 
-.grid {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-grid);
-  align-items: start;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11.5px;
+  max-width: 768px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-brown);
 }
 
 .heading {
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.96px;
+  font-size: 44px;
+  line-height: 52px;
+  letter-spacing: -0.66px;
   font-weight: 400;
   color: var(--text-dark);
 }
 
 .subheading {
-  margin-top: 8px;
-  font-size: 16px;
-  color: var(--text-muted);
-  margin-bottom: var(--gap-section);
+  max-width: 576px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-medium);
 }
 
-.summaryCard {
-  background: var(--bg-offwhite);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  padding: var(--pad-card);
-}
-
-.summaryTitle {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--accent-brown);
-  margin-bottom: 8px;
-}
-
-.summaryLine {
-  font-size: 14px;
-  color: var(--text-dark);
-}
-
-.summaryPrice {
-  margin-top: 8px;
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--accent-brown);
+/* Main Form Container: 768px, white, 24px radius, 48px padding */
+.formCard {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 48px;
+  background: #ffffff;
+  border: 1px solid rgba(36, 38, 36, 0.08);
+  border-radius: var(--radius-stage);
+  box-shadow: 0 2px 12px -2px rgba(50, 42, 38, 0.04);
+  margin-bottom: 2rem;
 }
 
 /* Form */
 .form {
-  background: var(--bg-offwhite);
-  border-radius: var(--radius-stage);
-  box-shadow: var(--shadow-card);
-  padding: var(--pad-card);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .label {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.72px;
-  text-transform: uppercase;
-  color: var(--text-medium);
-}
-
-.input,
-.textarea {
-  background: #ffffff;
-  border: 1px solid var(--border-base);
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-size: 15px;
-  font-family: inherit;
   color: var(--text-dark);
 }
 
+/* Input: #FCF9F3, 1px rgba(216,194,187,0.6), 48px radius, 14px/16px */
+.input,
 .textarea {
+  height: 50px;
+  padding: 14px 16px;
+  background: var(--bg-offwhite);
+  border: 1px solid rgba(216, 194, 187, 0.6);
+  border-radius: 48px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--text-dark);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #6b7280;
+}
+
+.textarea {
+  height: auto;
   resize: vertical;
 }
 
@@ -102,36 +110,116 @@
   color: var(--error);
 }
 
+/* Customiser Synchronized Fields Grid: #F6F3ED, 16px radius, 20px padding */
+.syncBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(216, 194, 187, 0.5);
+  border-radius: var(--radius-card);
+}
+
+.syncTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.syncLabel {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+}
+
+.syncHint {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-muted);
+}
+
+.syncRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.syncField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.syncFieldLabel {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+}
+
+/* Options pill inside sync grid */
+.syncValue {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px;
+  background: var(--bg-offwhite);
+  border: 1px solid rgba(216, 194, 187, 0.6);
+  border-radius: 32px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-dark);
+}
+
 .checkboxRow {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: flex-start;
-  font-size: 12px;
-  color: var(--text-medium);
+  padding-top: 8px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent-brown);
+  flex: none;
 }
 
 .checkboxText {
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-medium);
 }
 
+/* Submit: full-width pill, 52px, #8C4F3B */
 .submit {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 48px;
+  height: 52px;
+  padding: 16px 32px;
   border: none;
   border-radius: var(--radius-pill);
   background: var(--button-brown);
-  color: var(--bg-offwhite);
+  color: #ffffff;
   font-size: 14px;
-  font-weight: 600;
+  line-height: 20px;
+  font-weight: 500;
   letter-spacing: 0.56px;
-  box-shadow: var(--shadow-btn);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .footerNote {
   font-size: 10px;
+  line-height: 14px;
   font-weight: 600;
   letter-spacing: 0.8px;
   color: var(--text-muted);
@@ -140,12 +228,13 @@
 
 /* Success state */
 .success {
-  max-width: 640px;
+  max-width: 768px;
   margin: 0 auto;
-  background: var(--bg-offwhite);
+  background: #ffffff;
+  border: 1px solid rgba(36, 38, 36, 0.08);
   border-radius: var(--radius-stage);
-  box-shadow: var(--shadow-card);
-  padding: var(--pad-card);
+  box-shadow: 0 2px 12px -2px rgba(50, 42, 38, 0.04);
+  padding: 48px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -154,21 +243,29 @@
 }
 
 .successBody {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 24px;
   color: var(--text-medium);
 }
 
 @media (max-width: 900px) {
   .section {
-    padding: var(--gap-section) 24px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
+    padding: 64px 0 0;
   }
 
   .heading {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .formCard {
+    margin: 0 24px;
+    width: auto;
+    padding: 24px;
+  }
+
+  .row,
+  .syncRow {
+    grid-template-columns: 1fr;
   }
 }

@@ -8,12 +8,7 @@ export default function Hero() {
     <section className={styles.section} id="top">
       <div className={styles.inner}>
         <div className={styles.textCol}>
-          <div className={styles.eyebrowPill}>
-            <span className={styles.eyebrowDot} />
-            <span className={styles.eyebrow}>
-              SOFALIVING — BESPOKE SEATING ATELIER
-            </span>
-          </div>
+
           <h1 className={styles.heading}>
             Bespoke Sofas, Sculpted for Modern Indian Homes.
           </h1>
@@ -78,7 +73,6 @@ export default function Hero() {
           <span>10-Year Structural Warranty</span>
         </div>
       </div>
-    </div>
-    </section >
+    </section>
   );
 }

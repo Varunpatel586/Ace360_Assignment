@@ -87,61 +87,54 @@ export default function EnquiryForm({ config }: EnquiryFormProps) {
 
   return (
     <section className={styles.section} id="enquiry">
-      <div className={styles.grid}>
-        <div className={styles.intro}>
-          <h2 className={styles.heading}>Enquire About Your Bespoke Sofa</h2>
-          <p className={styles.subheading}>
-            Share your details and our consultants will confirm fabric
-            availability, dimensions and delivery timelines for your
-            configuration.
-          </p>
+      <div className={styles.header}>
+        <p className={styles.eyebrow}>Book a Private Consultation</p>
+        <h2 className={styles.heading}>Enquire About Your Bespoke Sofa</h2>
+        <p className={styles.subheading}>
+          Share your room dimensions and our atelier team will return a
+          tailored quotation within 24 hours.
+        </p>
+      </div>
 
-          {/* Live summary of the selected configuration */}
-          <div className={styles.summaryCard}>
-            <p className={styles.summaryTitle}>Your Configuration</p>
-            <p className={styles.summaryLine}>
-              The {model.name} · {colour?.label} · {fabric.displayLabel} ·{" "}
-              {seating.label}
-            </p>
-            <p className={styles.summaryPrice}>{formatPrice(price.total)}</p>
-          </div>
-        </div>
-
+      <div className={styles.formCard}>
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
-          <div className={styles.field}>
-            <label className={styles.label} htmlFor="name">
-              Full Name
-            </label>
-            <input
-              className={styles.input}
-              id="name"
-              name="name"
-              type="text"
-              autoComplete="name"
-              required
-            />
-            {errors.name && <p className={styles.error}>{errors.name}</p>}
-          </div>
+          <div className={styles.row}>
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="name">
+                Full Name *
+              </label>
+              <input
+                className={styles.input}
+                id="name"
+                name="name"
+                type="text"
+                placeholder="e.g. Ananya Sen"
+                autoComplete="name"
+                required
+              />
+              {errors.name && <p className={styles.error}>{errors.name}</p>}
+            </div>
 
-          <div className={styles.field}>
-            <label className={styles.label} htmlFor="phone">
-              Phone Number (+91)
-            </label>
-            <input
-              className={styles.input}
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="9876543210 (10 digits)"
-              autoComplete="tel"
-              required
-            />
-            {errors.phone && <p className={styles.error}>{errors.phone}</p>}
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="phone">
+                Phone Number (+91) *
+              </label>
+              <input
+                className={styles.input}
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="9876543210 (10 digits)"
+                autoComplete="tel"
+                required
+              />
+              {errors.phone && <p className={styles.error}>{errors.phone}</p>}
+            </div>
           </div>
 
           <div className={styles.field}>
             <label className={styles.label} htmlFor="email">
-              Email Address
+              Email Address *
             </label>
             <input
               className={styles.input}
@@ -155,35 +148,70 @@ export default function EnquiryForm({ config }: EnquiryFormProps) {
             {errors.email && <p className={styles.error}>{errors.email}</p>}
           </div>
 
-          <div className={styles.field}>
-            <label className={styles.label} htmlFor="delivery">
-              Delivery City &amp; Pincode
-            </label>
-            <input
-              className={styles.input}
-              id="delivery"
-              name="delivery"
-              type="text"
-              placeholder="e.g. Bangalore, 560038"
-            />
+          {/* Customiser Synchronized Fields Grid — mirrors the live selection */}
+          <div className={styles.syncBox}>
+            <div className={styles.syncTop}>
+              <span className={styles.syncLabel}>
+                Synced From Your Customiser
+              </span>
+              <span className={styles.syncHint}>
+                Updates automatically
+              </span>
+            </div>
+            <div className={styles.syncRow}>
+              <div className={styles.syncField}>
+                <span className={styles.syncFieldLabel}>Model Selection</span>
+                <span className={styles.syncValue}>{model.displayName}</span>
+              </div>
+              <div className={styles.syncField}>
+                <span className={styles.syncFieldLabel}>Fabric &amp; Colour</span>
+                <span className={styles.syncValue}>
+                  {fabric.displayLabel} · {colour?.label}
+                </span>
+              </div>
+              <div className={styles.syncField}>
+                <span className={styles.syncFieldLabel}>Seating Size</span>
+                <span className={styles.syncValue}>
+                  {seating.stageLabel}
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.field}>
-            <label className={styles.label} htmlFor="message">
-              Special Dimensions or Room Requirements (Optional)
-            </label>
-            <textarea
-              className={styles.textarea}
-              id="message"
-              name="message"
-              rows={4}
-              required
-            />
-            {errors.message && <p className={styles.error}>{errors.message}</p>}
+          <div className={styles.row}>
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="delivery">
+                Delivery City &amp; Pincode *
+              </label>
+              <input
+                className={styles.input}
+                id="delivery"
+                name="delivery"
+                type="text"
+                placeholder="e.g. Bangalore, 560038"
+              />
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="message">
+                Special Dimensions or Room Requirements (Optional)
+              </label>
+              <input
+                className={styles.input}
+                id="message"
+                name="message"
+                type="text"
+                required
+              />
+              {errors.message && (
+                <p className={styles.error}>{errors.message}</p>
+              )}
+            </div>
           </div>
 
           <label className={styles.checkboxRow}>
             <input
+              className={styles.checkbox}
               type="checkbox"
               name="swatchKit"
               checked={swatchKit}
@@ -197,12 +225,12 @@ export default function EnquiryForm({ config }: EnquiryFormProps) {
           </label>
 
           <button type="submit" className={styles.submit}>
-            Submit Bespoke Enquiry
+            <span>Submit Bespoke Enquiry</span>
             <Image
               src="/images/icon-submit.svg"
               alt=""
-              width={14}
-              height={14}
+              width={11}
+              height={10}
             />
           </button>
 
