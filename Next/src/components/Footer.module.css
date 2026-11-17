@@ -1,0 +1,67 @@
+/* Footer — brand block, working anchor links. */
+
+.footer {
+  background: var(--text-dark);
+  color: var(--bg-offwhite);
+  padding: var(--gap-section) var(--pad-container) 24px;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-grid);
+  flex-wrap: wrap;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brand {
+  font-family: var(--font-eb-garamond), Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 2.4px;
+}
+
+.note {
+  font-size: 13px;
+  color: var(--border-light);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--border-light);
+}
+
+.link:hover {
+  color: var(--bg-offwhite);
+}
+
+.copyright {
+  max-width: 1280px;
+  margin: var(--gap-section) auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(252, 249, 243, 0.15);
+  font-size: 11px;
+  color: var(--border-light);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: var(--gap-section) 24px 24px;
+  }
+}

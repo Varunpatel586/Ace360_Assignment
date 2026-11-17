@@ -1,0 +1,47 @@
+/* Home page sections — collections grid. */
+
+.collections {
+  padding: var(--gap-section) var(--pad-container);
+}
+
+.collectionsHead {
+  max-width: 1280px;
+  margin: 0 auto var(--gap-section);
+}
+
+.sectionHeading {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.sectionSub {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.cardGrid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid);
+}
+
+@media (max-width: 900px) {
+  .collections {
+    padding: var(--gap-section) 24px;
+  }
+
+  .sectionHeading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

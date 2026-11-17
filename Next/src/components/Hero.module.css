@@ -1,0 +1,124 @@
+/* Hero — EB Garamond 64px heading, 2 CTAs, wide image frame with floating badge. */
+
+.section {
+  padding: 40px var(--pad-container) var(--gap-section);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.textCol {
+  max-width: 768px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-brown);
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -1.28px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.subheading {
+  font-size: 18px;
+  line-height: 29.25px;
+  color: var(--text-medium);
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+
+.ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 28px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+}
+
+.primaryCta {
+  background: var(--button-brown);
+  color: var(--bg-offwhite);
+  box-shadow: var(--shadow-btn);
+}
+
+.secondaryCta {
+  border: 1px solid var(--border-strong);
+  color: var(--text-dark);
+}
+
+.imageFrame {
+  position: relative;
+  max-width: 1152px;
+  margin: 48px auto 0;
+  border-radius: var(--radius-stage);
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  background: var(--badge-bg);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-card);
+  padding: 16px 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.badgeLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-brown);
+}
+
+.badgeTitle {
+  font-family: var(--font-eb-garamond), Georgia, serif;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 24px 24px var(--gap-section);
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+  }
+
+  .badge {
+    left: 16px;
+    bottom: 16px;
+    right: 16px;
+  }
+}

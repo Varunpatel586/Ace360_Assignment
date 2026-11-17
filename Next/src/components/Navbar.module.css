@@ -1,0 +1,117 @@
+/* Navbar — DM Sans 12px uppercase links, pill CTA, brand in EB Garamond. */
+/* Note: I wrote the component at src/components/Navbar.tsx. Adjust import paths accordingly. */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(252, 249, 243, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-base);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--pad-container);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.brandSerif {
+  font-family: var(--font-eb-garamond), Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 2.4px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.brandDot {
+  font-size: 10px;
+  color: var(--accent-brown);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-medium);
+}
+
+.link:hover {
+  color: var(--accent-brown);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: var(--radius-pill);
+  background: var(--button-brown);
+  color: var(--bg-offwhite);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+  box-shadow: var(--shadow-btn);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.burger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+  display: block;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    padding: 0 24px;
+  }
+
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    gap: 14px;
+    background: var(--bg-offwhite);
+    border-bottom: 1px solid var(--border-base);
+  }
+}
