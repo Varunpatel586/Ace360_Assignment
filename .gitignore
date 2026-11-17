@@ -1,3 +1,7 @@
+# Agent skill references (pre-existing in workspace, not part of deliverable)
+.agents/
+skills-lock.json
+
 # OS files
 Thumbs.db
 .DS_Store
