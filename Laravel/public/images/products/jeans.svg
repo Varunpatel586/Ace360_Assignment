@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Folded pair of dark jeans">
+  <rect width="160" height="160" fill="#eef1f4"/>
+  <ellipse cx="80" cy="120" rx="46" ry="6" fill="#dfe4e9"/>
+  <path d="M42 62h76a4 4 0 0 1 4 4v14H38V66a4 4 0 0 1 4-4Z" fill="#39424f"/>
+  <path d="M38 80h84v18H38Z" fill="#2f3742"/>
+  <path d="M40 98h80a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H40a4 4 0 0 1-4-4v-12a4 4 0 0 1 4-4Z" fill="#39424f"/>
+  <path d="M46 90h68" stroke="#68717d" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+  <path d="M46 108h68" stroke="#68717d" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+  <path d="M52 68h22l-4 8H50Z" fill="#4b5561"/>
+</svg>

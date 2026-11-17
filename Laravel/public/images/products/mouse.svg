@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Black wireless mouse">
+  <rect width="160" height="160" fill="#eef1f4"/>
+  <ellipse cx="80" cy="128" rx="38" ry="6" fill="#dee3e8"/>
+  <path d="M80 34c21 0 33 17 33 44v22c0 19-13 32-33 32s-33-13-33-32V78c0-27 12-44 33-44Z" fill="#3d434b"/>
+  <path d="M80 41c17 0 27 14 27 37v18c0 15-11 26-27 26s-27-11-27-26V78c0-23 10-37 27-37Z" fill="#4b525c"/>
+  <rect x="76" y="48" width="8" height="20" rx="4" fill="#23272d"/>
+  <path d="M53 78c0-9 11-14 27-14s27 5 27 14" stroke="#3a414a" stroke-width="1.6" fill="none" opacity=".8"/>
+</svg>

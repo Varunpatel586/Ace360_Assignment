@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Folded t-shirt in a grey box">
+  <rect width="160" height="160" fill="#eef1f4"/>
+  <ellipse cx="80" cy="126" rx="50" ry="7" fill="#dfe4e9"/>
+  <rect x="36" y="54" width="88" height="24" rx="5" fill="#cbd0d7"/>
+  <rect x="40" y="74" width="80" height="48" rx="5" fill="#b7bdc6"/>
+  <rect x="54" y="88" width="34" height="20" rx="3" fill="#f4f5f7"/>
+  <rect x="58" y="94" width="20" height="3" rx="1.5" fill="#c8ccd3"/>
+  <rect x="58" y="100" width="14" height="3" rx="1.5" fill="#d6d9de"/>
+  <rect x="36" y="54" width="88" height="7" rx="3.5" fill="#d7dbe1"/>
+</svg>

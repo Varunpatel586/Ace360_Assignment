@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Matte ceramic coffee mug">
+  <rect width="160" height="160" fill="#eef1f4"/>
+  <ellipse cx="78" cy="126" rx="42" ry="6" fill="#dee3e8"/>
+  <path d="M104 78a17 17 0 0 1 0 30l5 6a24 24 0 0 0 0-42Z" fill="#c8ccd2"/>
+  <path d="M46 64h56v44a22 22 0 0 1-22 22H68a22 22 0 0 1-22-22Z" fill="#d9dce1"/>
+  <ellipse cx="74" cy="64" rx="28" ry="9" fill="#eff1f4"/>
+  <ellipse cx="74" cy="64" rx="21" ry="6" fill="#d3d7dd"/>
+  <path d="M46 96a28 9 0 0 0 56 0" stroke="#cfd3d9" stroke-width="1.5" fill="none" opacity=".7"/>
+</svg>
