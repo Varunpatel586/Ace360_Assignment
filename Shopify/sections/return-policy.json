@@ -1,0 +1,16 @@
+{
+  "name": "Return Policy",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "return-policy": {
+      "type": "return-policy",
+      "settings": {
+        "heading": "Return Policy",
+        "content": "We want you to love your purchase! Items can be returned within 7 days of delivery if unused and in original packaging. Note that some products marked as 'Free Delivery' or 'Customer's Choice' may not be eligible for return. For more details, please contact our customer care team at hello@urbanthreads.com."
+      }
+    }
+  },
+  "order": ["return-policy"]
+}

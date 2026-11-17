@@ -1,0 +1,41 @@
+<!--
+  Product Card
+  Renders a single product card with image, category, title, price, and optional wishlist
+-->
+{%- if product -%}
+<article class="product-card">
+  <div class="product-card__image">
+    <img
+      src="{{ product.featured_image | image_url: width: 800 }}"
+      alt="{{ product.title }}"
+      loading="lazy"
+    />
+    {% if product.compare_at_price > product.price %}
+      <div class="badge badge-accent">BEST SELLER</div>
+    {% endif %}
+    {% if settings.show_wishlist %}
+      <button class="product-card__wishlist" aria-label="Add to wishlist">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.35l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+    {% endif %}
+  </div>
+  <div class="product-card__info">
+    <p class="product-card__category">{{ product.vendor }}</p>
+    <h3 class="product-card__title">{{ product.title | escape }}</h3>
+    <p class="product-card__price">{{ product.price | money }}</p>
+    {% if settings.show_swatches and product.options -%}
+      <div class="product-card__swatches">
+        {% for option in product.options %}
+          {% if option.name == 'Color' or option.name == 'Colour' %}
+            {% for value in option.values %}
+              <span class="product-card__swatch" style="background: {{ value | replace: ' ','-' | downcase }};"></span>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>
+{%- endif -%}

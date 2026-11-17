@@ -1,0 +1,18 @@
+{
+  "name": "Product Card",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "product-card": {
+      "type": "product-card",
+      "settings": {
+        "show_wishlist": true,
+        "show_category": true,
+        "show_price": true,
+        "show_swatches": true
+      }
+    }
+  },
+  "order": ["product-card"]
+}

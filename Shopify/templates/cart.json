@@ -1,0 +1,33 @@
+{
+  "name": "Cart",
+  "layout": "full-width",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_search": false,
+            "show_cart": true
+          }
+        }
+      },
+      "settings": {}
+    },
+    "cart-items": {
+      "type": "cart-items",
+      "blocks": {
+        "cart-line-item": {
+          "type": "cart-line-item"
+        }
+      }
+    },
+    "cart-totals": {
+      "type": "cart-totals"
+    },
+    "cart-checkout": {
+      "type": "cart-checkout"
+    }
+  }
+}

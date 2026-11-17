@@ -1,0 +1,255 @@
+{
+  "name": "URBAN THREADS Theme Settings",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand Information"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Upload a transparent PNG logo for the header"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "colors_primary",
+      "label": "Primary Color",
+      "default": "#18233C"
+    },
+    {
+      "type": "color",
+      "id": "colors_secondary",
+      "label": "Secondary Color",
+      "default": "#FE8357"
+    },
+    {
+      "type": "color",
+      "id": "colors_background",
+      "label": "Background Color",
+      "default": "#F4F3F0"
+    },
+    {
+      "type": "color",
+      "id": "colors_text",
+      "label": "Text Color",
+      "default": "#444748"
+    },
+    {
+      "type": "color",
+      "id": "colors_border",
+      "label": "Border Color",
+      "default": "#E3E2DF"
+    },
+    {
+      "type": "color",
+      "id": "colors_link",
+      "label": "Link Color",
+      "default": "#18233C"
+    },
+    {
+      "type": "color",
+      "id": "colors_wishlist_icon",
+      "label": "Wishlist Icon Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "colors_wishlist_bg",
+      "label": "Wishlist Icon Background",
+      "default": "#18233C"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "typography_heading_font",
+      "label": "Heading Font",
+      "default": "Space Grotesk"
+    },
+    {
+      "type": "font_picker",
+      "id": "typography_body_font",
+      "label": "Body Font",
+      "default": "Inter"
+    },
+    {
+      "type": "font_picker",
+      "id": "typography_hero_font",
+      "label": "Hero Heading Font",
+      "default": "Plus Jakarta Sans"
+    },
+    {
+      "type": "header",
+      "content": "Homepage Content"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_show_search",
+      "label": "Show Search Bar",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "header_show_cart",
+      "label": "Show Cart Button",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Hero Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_banner_image",
+      "label": "Hero Banner Image",
+      "info": "Upload your hero banner image"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading_1",
+      "label": "Hero Heading",
+      "default": "EFFORTLESS"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading_2",
+      "label": "Hero Subheading (Line 2)",
+      "default": "EVERYDAY STYLE."
+    },
+    {
+      "type": "text",
+      "id": "hero_subheading",
+      "label": "Hero Subheading Body",
+      "default": "Premium casuals engineered for daily wear and relaxed comfort. Thoughtful cuts, tailored in breathable 100% Indian cotton."
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Primary Button Text",
+      "default": "SHOP MEN"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_url",
+      "label": "Primary Button URL",
+      "default": "/collections/men"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "SHOP WOMEN"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_button_url",
+      "label": "Secondary Button URL",
+      "default": "/collections/women"
+    },
+    {
+      "type": "header",
+      "content": "Micro Specs"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_label_1",
+      "label": "Spec 1 Label",
+      "default": "240 GSM"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_value_1",
+      "label": "Spec 1 Value",
+      "default": "Heavy Cotton"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_label_2",
+      "label": "Spec 2 Label",
+      "default": "Pre-Shrunk"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_value_2",
+      "label": "Spec 2 Value",
+      "default": "Zero Sagging"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_label_3",
+      "label": "Spec 3 Label",
+      "default": "₹999+"
+    },
+    {
+      "type": "text",
+      "id": "micro_specs_value_3",
+      "label": "Spec 3 Value",
+      "default": "Free Delivery"
+    },
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "text",
+      "id": "footer_contact_email",
+      "label": "Contact Email",
+      "default": "hello@urbanthreads.com"
+    },
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "text",
+      "id": "social_instagram",
+      "label": "Instagram URL",
+      "default": "https://instagram.com/urbanthreads"
+    },
+    {
+      "type": "text",
+      "id": "social_facebook",
+      "label": "Facebook URL",
+      "default": "https://facebook.com/urbanthreads"
+    },
+    {
+      "type": "text",
+      "id": "social_twitter",
+      "label": "Twitter URL",
+      "default": "https://twitter.com/urbanthreads"
+    },
+    {
+      "type": "header",
+      "content": "Store Information"
+    },
+    {
+      "type": "text",
+      "id": "store_name",
+      "label": "Store Name",
+      "default": "URBAN THREADS"
+    },
+    {
+      "type": "text",
+      "id": "store_phone",
+      "label": "Phone",
+      "default": "+91 98765 43210"
+    },
+    {
+      "type": "text",
+      "id": "store_address",
+      "label": "Address",
+      "default": "402, Lotus Grandeur, 14th Road, Bandra West, Mumbai, 400050"
+    }
+  ]
+}

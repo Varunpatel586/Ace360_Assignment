@@ -1,0 +1,16 @@
+{
+  "name": "Pagination",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "pagination": {
+      "type": "pagination",
+      "settings": {
+        "prev_label": "Previous",
+        "next_label": "Next"
+      }
+    }
+  },
+  "order": ["pagination"]
+}

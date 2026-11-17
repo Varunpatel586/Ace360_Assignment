@@ -1,0 +1,21 @@
+{
+  "name": "Featured Collections",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "featured-collections": {
+      "type": "featured-collections",
+      "settings": {
+        "heading": "FEATURED COLLECTIONS",
+        "collections": [
+          { "title": "Men's Collection", "handle": "mens" },
+          { "title": "Women's Collection", "handle": "womens" },
+          { "title": "New Arrivals", "handle": "new-arrivals" },
+          { "title": "Best Sellers", "handle": "best-sellers" }
+        ]
+      }
+    }
+  },
+  "order": ["featured-collections"]
+}

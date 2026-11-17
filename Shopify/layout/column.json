@@ -1,0 +1,18 @@
+{
+  "name": "Column Layout",
+  "type": "layout",
+  "sections": {
+    "column": {
+      "type": "column",
+      "blocks": {
+        "main": {
+          "type": "main",
+          "settings": {
+            "columns": 1
+          }
+        }
+      },
+      "order": ["main"]
+    }
+  }
+}

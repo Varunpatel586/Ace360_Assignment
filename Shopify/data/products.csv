@@ -1,0 +1,9 @@
+product,title,price,compare_at_price,sku,vendor,inventory_quantity,type,tags
+Men's Classic Cotton T-Shirt,Men's Classic Cotton T-Shirt,699,,MTS001,Urban Threads,12,Default Title,"Men; T-Shirts; Best Seller"
+Men's Oversized T-Shirt,Men's Oversized T-Shirt,899,,MTS002,Urban Threads,15,Default Title,"Men; T-Shirts; Trending"
+Men's Slim-Fit Jeans,Men's Slim-Fit Jeans,1499,,MJN001,Urban Threads,10,Default Title,"Men; Jeans; Popular"
+Men's Checked Shirt,Men's Checked Shirt,1199,,MSH001,Urban Threads,8,Default Title,"Men; Shirts; Best Seller"
+Women's Essential T-Shirt,Women's Essential T-Shirt,599,,WTS001,Urban Threads,20,Default Title,"Women; T-Shirts; Popular"
+Women's Oversized T-Shirt,Women's Oversized T-Shirt,799,,WTS002,Urban Threads,12,Default Title,"Women; T-Shirts; Trending"
+Women's High-Waist Jeans,Women's High-Waist Jeans,1499,,WJN001,Urban Threads,15,Default Title,"Women; Jeans; Best Seller"
+Women's Striped Shirt,Women's Striped Shirt,1099,,WSH001,Urban Threads,10,Default Title,"Women; Shirts; Trending"

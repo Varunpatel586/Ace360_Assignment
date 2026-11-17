@@ -1,74 +1,106 @@
-/* Navbar — DM Sans 12px uppercase links, pill CTA, brand in EB Garamond. */
-/* Note: I wrote the component at src/components/Navbar.tsx. Adjust import paths accordingly. */
+/* Header — rgba(252,249,243,0.9) blur bar, brand lockup, DM Sans 14px links, phone + pill CTA. */
 
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(252, 249, 243, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-base);
+  background: rgba(252, 249, 243, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(216, 194, 187, 0.4);
+  box-shadow: 0 2px 12px -2px rgba(50, 42, 38, 0.04);
 }
 
 .inner {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--pad-container);
-  height: 72px;
+  padding: 0 64px;
+  height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 32px;
 }
 
 .brand {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
   gap: 2px;
 }
 
 .brandSerif {
   font-family: var(--font-eb-garamond), Georgia, serif;
-  font-size: 22px;
-  letter-spacing: 2.4px;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
   color: var(--text-dark);
 }
 
-.brandDot {
+.brandTag {
   font-size: 10px;
-  color: var(--accent-brown);
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-muted);
 }
 
 .nav {
   display: flex;
-  gap: 28px;
-  margin-left: auto;
+  align-items: center;
 }
 
-.link {
-  font-size: 12px;
+.navItem {
+  padding: 0 0 4px 32px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  letter-spacing: 0.56px;
   color: var(--text-medium);
 }
 
-.link:hover {
+.navItem:hover {
   color: var(--accent-brown);
+}
+
+.navItemActive {
+  padding: 0 0 4px;
+  border-bottom: 2px solid var(--accent-brown);
+  color: var(--accent-brown);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: var(--text-medium);
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 40px;
-  padding: 0 20px;
+  padding: 10px 24px;
+  margin-left: 24px;
   border-radius: var(--radius-pill);
   background: var(--button-brown);
-  color: var(--bg-offwhite);
-  font-size: 13px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   letter-spacing: 0.56px;
-  box-shadow: var(--shadow-btn);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .burger {
@@ -97,13 +129,13 @@
   }
 
   .nav,
+  .phone,
   .cta {
     display: none;
   }
 
   .burger {
     display: flex;
-    margin-left: auto;
   }
 
   .mobileNav {
@@ -111,7 +143,7 @@
     flex-direction: column;
     padding: 12px 24px 20px;
     gap: 14px;
-    background: var(--bg-offwhite);
-    border-bottom: 1px solid var(--border-base);
+    background: var(--bg-page);
+    border-bottom: 1px solid rgba(216, 194, 187, 0.4);
   }
 }

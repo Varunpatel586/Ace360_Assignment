@@ -1,0 +1,15 @@
+<!--
+  Footer Links
+  Renders a footer column with heading and links
+-->
+{%- if heading -%}
+  <h3 class="footer-links__heading">{{ heading }}</h3>
+{%- endif -%}
+
+<ul class="footer-links__list">
+  {%- for link in links -%}
+    <li>
+      <a href="{{ link.url | escape }}">{{ link.label | escape }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

@@ -1,0 +1,16 @@
+{
+  "name": "Header",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "show_search": true,
+        "show_cart": true
+      }
+    }
+  },
+  "order": ["header"]
+}

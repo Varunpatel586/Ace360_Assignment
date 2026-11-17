@@ -1,0 +1,12 @@
+<!--
+  Color Swatch
+  Renders a color swatch with optional label
+-->
+{% if options.size == 'Color' or options.size == 'Colour' %}
+  {%- for value in options[options.size].values -%}
+    <label class="color-swatch" style="background-color: {{ value | replace: ' ','-' | downcase }};">
+      <input type="radio" name="id" value="{{ value }}" />
+      <span class="swatch-label">{{ value }}</span>
+    </label>
+  {%- endfor -%}
+{% endif %}

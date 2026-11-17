@@ -1,0 +1,28 @@
+{
+  "name": "Homepage",
+  "layout": "splash",
+  "sections": {
+    "homepage": {
+      "type": "homepage",
+      "settings": {
+        "logo": "",
+        "hero_banner_image": "hero-banner.jpg",
+        "hero_heading_1": "EFFORTLESS",
+        "hero_heading_2": "EVERYDAY STYLE.",
+        "hero_subheading": "Premium casuals engineered for daily wear and relaxed comfort. Thoughtful cuts, tailored in breathable 100% Indian cotton.",
+        "hero_button_text": "SHOP MEN",
+        "hero_button_url": "/collections/men",
+        "hero_secondary_button_text": "SHOP WOMEN",
+        "hero_secondary_button_url": "/collections/women",
+        "micro_specs_label_1": "240 GSM",
+        "micro_specs_value_1": "Heavy Cotton",
+        "micro_specs_label_2": "Pre-Shrunk",
+        "micro_specs_value_2": "Zero Sagging",
+        "micro_specs_label_3": "₹999+",
+        "micro_specs_value_3": "Free Delivery",
+        "featured_collections_heading": "FEATURED COLLECTIONS",
+        "featured_products_heading": "FEATURED ESSENTIALS"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Product Information",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "quantity": {
+      "type": "quantity",
+      "settings": {
+        "label": "Quantity"
+      }
+    },
+    "variant-picker": {
+      "type": "variant-picker",
+      "settings": {
+        "label": "Select options"
+      }
+    },
+    "color-swatch": {
+      "type": "color-swatch",
+      "settings": {
+        "label": "Color"
+      }
+    },
+    "size-picker": {
+      "type": "size-picker",
+      "settings": {
+        "label": "Size"
+      }
+    },
+    "sku": {
+      "type": "sku",
+      "settings": {
+        "label": "SKU"
+      }
+    },
+    "wishlist": {
+      "type": "wishlist",
+      "settings": {
+        "show_wishlist": true
+      }
+    },
+    "buy-now": {
+      "type": "buy-now",
+      "settings": {
+        "label": "Buy now"
+      }
+    }
+  },
+  "order": ["quantity", "variant-picker", "color-swatch", "size-picker", "sku", "wishlist", "buy-now"]
+}

@@ -2,7 +2,9 @@
 
 :root {
   /* Colours */
+  --bg-page: #fcf9f3;
   --bg-light: #f0eee8;
+  --bg-panel: #f6f3ed;
   --text-dark: #1c1c18;
   --text-medium: #53433f;
   --text-muted: #85736e;
@@ -39,13 +41,30 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: var(--bg-page);
   color: var(--text-dark);
   font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, .serif {
+h1,
+h2,
+h3,
+.serif {
   font-family: var(--font-eb-garamond), Georgia, serif;
+}
+
+/* Page container: full width, Figma 64px side padding, centered content max 1280 */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 24px;
+  }
 }
 
 a {

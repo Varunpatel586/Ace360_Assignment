@@ -1,0 +1,42 @@
+{
+  "name": "Shopify Layout",
+  "type": "layout",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_search": true,
+            "show_cart": true
+          }
+        }
+      },
+      "settings": {}
+    },
+    "main": {
+      "type": "main",
+      "blocks": {}
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-links": {
+          "type": "footer-links",
+          "settings": {
+            "heading": "NAVIGATION",
+            "links": [
+              { "label": "Men", "url": "/collections/men" },
+              { "label": "Women", "url": "/collections/women" },
+              { "label": "T-Shirts", "url": "/collections/t-shirts" },
+              { "label": "Jeans", "url": "/collections/jeans" },
+              { "label": "Shirts", "url": "/collections/shirts" }
+            ]
+          }
+        }
+      },
+      "settings": {}
+    }
+  }
+}

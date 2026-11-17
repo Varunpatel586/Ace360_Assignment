@@ -1,0 +1,15 @@
+{
+  "name": "Featured Products",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "FEATURED ESSENTIALS"
+      }
+    }
+  },
+  "order": ["featured-products"]
+}

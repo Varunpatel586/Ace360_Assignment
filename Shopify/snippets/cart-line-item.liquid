@@ -1,0 +1,47 @@
+<!--
+  Cart Line Item
+  Renders a single item in the cart with quantity controls and remove action
+-->
+<div class="cart-line-item" data-line-item>
+  <div class="cart-line-item__image">
+    <img
+      src="{{ cart_item.product.featured_image | image_url: width: 200 }}"
+      alt="{{ cart_item.product.title }}"
+      loading="lazy"
+    />
+  </div>
+  <div class="cart-line-item__details">
+    <h4 class="cart-line-item__title">{{ cart_item.product.title | escape }}</h4>
+    <p class="cart-line-item__variant">{{ cart_item.variant.title | escape }}</p>
+    <dl class="cart-line-item__meta">
+      <div>
+        <dt>Price</dt>
+        <dd>{{ cart_item.line_price | money }}</dd>
+      </div>
+      <div>
+        <dt>Qty</dt>
+        <dd>
+          <div class="qty-control" data-quantity>
+            <button type="button" class="qty-btn" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+            <input
+              type="number"
+              name="updates[{{ cart_item.id }}]"
+              value="{{ cart_item.quantity }}"
+              min="1"
+              class="qty-input"
+            />
+            <button type="button" class="qty-btn" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+          </div>
+        </dd>
+      </div>
+    </dl>
+  </div>
+  <div class="cart-line-item__actions">
+    <button type="button" class="btn-link" data-cart-remove data-line-item-id="{{ cart_item.id }}">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 7l-.867 12.142A2 2 0 0 1 16.138 21H7.862a2 2 0 0 1-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3M4 7h16"/>
+      </svg>
+      Remove
+    </button>
+  </div>
+</div>

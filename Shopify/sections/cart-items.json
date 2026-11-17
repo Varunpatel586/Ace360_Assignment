@@ -1,0 +1,17 @@
+{
+  "name": "Cart Items",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "cart-items": {
+      "type": "cart-items",
+      "blocks": {
+        "cart-line-item": {
+          "type": "cart-line-item"
+        }
+      }
+    }
+  },
+  "order": ["cart-items"]
+}

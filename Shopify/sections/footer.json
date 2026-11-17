@@ -1,0 +1,56 @@
+{
+  "name": "Footer",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "footer-links": {
+      "type": "footer-links",
+      "settings": {
+        "heading": "NAVIGATION",
+        "links": [
+          { "label": "Men", "url": "/collections/men" },
+          { "label": "Women", "url": "/collections/women" },
+          { "label": "T-Shirts", "url": "/collections/t-shirts" },
+          { "label": "Jeans", "url": "/collections/jeans" },
+          { "label": "Shirts", "url": "/collections/shirts" }
+        ]
+      }
+    },
+    "about-us": {
+      "type": "about-us",
+      "settings": {
+        "heading": "ABOUT US",
+        "links": [
+          { "label": "Our Story", "url": "/about-us" },
+          { "label": "Sustainability", "url": "/sustainability" }
+        ]
+      }
+    },
+    "contact": {
+      "type": "contact",
+      "settings": {
+        "heading": "CONTACT US",
+        "email": "hello@urbanthreads.com"
+      }
+    },
+    "payment": {
+      "type": "payment",
+      "settings": {
+        "heading": "PAYMENT METHODS"
+      }
+    },
+    "social": {
+      "type": "social",
+      "settings": {
+        "heading": "FOLLOW US",
+        "icons": [
+          { "icon": "instagram", "url": "https://instagram.com/urbanthreads" },
+          { "icon": "facebook", "url": "https://facebook.com/urbanthreads" },
+          { "icon": "twitter", "url": "https://twitter.com/urbanthreads" }
+        ]
+      }
+    }
+  },
+  "order": ["footer-links", "about-us", "contact", "payment", "social"]
+}

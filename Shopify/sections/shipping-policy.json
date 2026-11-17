@@ -1,0 +1,16 @@
+{
+  "name": "Shipping Policy",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "shipping-policy": {
+      "type": "shipping-policy",
+      "settings": {
+        "heading": "Shipping Policy",
+        "content": "We ship to all addresses within India. Standard delivery takes 5-7 business days for most orders. Free shipping on all orders over ₹499. Express delivery is available at an additional cost. All orders are processed and dispatched within 24 hours of placement."
+      }
+    }
+  },
+  "order": ["shipping-policy"]
+}

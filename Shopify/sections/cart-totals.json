@@ -1,0 +1,17 @@
+{
+  "name": "Cart Totals",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "cart-totals": {
+      "type": "cart-totals",
+      "settings": {
+        "show_tax": true,
+        "show_shipping": true,
+        "show_order_total": true
+      }
+    }
+  },
+  "order": ["cart-totals"]
+}

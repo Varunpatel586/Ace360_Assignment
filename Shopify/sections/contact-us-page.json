@@ -1,0 +1,19 @@
+{
+  "name": "Contact Us Page",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "contact-us-page": {
+      "type": "contact-us-page",
+      "settings": {
+        "heading": "Contact Us",
+        "content": "Got a question or feedback? We'd love to hear from you. Drop us a message and our team will get back to you within 24 hours.",
+        "email": "hello@urbanthreads.com",
+        "phone": "+91 98765 43210",
+        "address": "402, Lotus Grandeur, 14th Road, Bandra West, Mumbai, 400050"
+      }
+    }
+  },
+  "order": ["contact-us-page"]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "URBAN THREADS",
+  "vendor": "Ace360",
+  "version": "1.0.0",
+  "theme_name": "URBAN THREADS",
+  "theme_storefront": "Ace360_Assignment",
+  "theme_author": "Ace360",
+  "framework": "Shopifyliquid",
+  "styles": {
+    "assets": {
+      "base.css": {
+        "type": "css",
+        "media": "screen"
+      },
+      "theme.css": {
+        "type": "css",
+        "media": "screen"
+      }
+    },
+    "previews": []
+  },
+  "template_overrides": {
+    "index": "templates/index.json",
+    "collection": "templates/collection.json",
+    "product": "templates/product.json",
+    "cart": "templates/cart.json",
+    "page": "templates/page.json",
+    "404": "templates/404.json"
+  },
+  "sections": {
+    "homepage": {
+      "type": "homepage",
+      "blocks": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_search": false,
+            "show_cart": false
+          }
+        },
+        "hero-banner": {
+          "type": "hero-banner",
+          "settings": {
+            "image": "hero-banner.jpg",
+            "heading": "EFFORTLESS",
+            "subheading": "EVERYDAY STYLE.",
+            "button_label": "SHOP MEN",
+            "button_url": "/collections/men"
+          }
+        },
+        "micro-specs": {
+          "type": "micro-specs",
+          "settings": {
+            "specs": [
+              { "label": "240 GSM", "value": "Heavy Cotton" },
+              { "label": "Pre-Shrunk", "value": "Zero Sagging" },
+              { "label": "₹999+", "value": "Free Delivery" }
+            ]
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "settings": {
+            "heading": "FEATURED COLLECTIONS"
+          }
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "heading": "FEATURED ESSENTIALS"
+          }
+        }
+      },
+      "order": ["header", "hero-banner", "micro-specs", "featured-collections", "featured-products"]
+    }
+  },
+  "order": ["homepage"]
+}

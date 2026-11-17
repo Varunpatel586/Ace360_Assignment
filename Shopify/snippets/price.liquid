@@ -1,0 +1,14 @@
+<!--
+  Price
+  Formats a price with optional compare-at price
+-->
+{%- if price.compare_at_price != blank and price.compare_at_price > price.price -%}
+  <span class="price">
+    <span class="price__current">{{ price.price | money }}</span>
+    <span class="price__compare">{{ price.compare_at_price | money }}</span>
+  </span>
+{%- else -%}
+  <span class="price">
+    <span class="price__current">{{ price | money }}</span>
+  </span>
+{%- endif -%}

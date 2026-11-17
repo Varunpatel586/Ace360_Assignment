@@ -1,0 +1,16 @@
+{
+  "name": "About Us Page",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "about-us-page": {
+      "type": "about-us-page",
+      "settings": {
+        "heading": "About Us",
+        "content": "URBAN THREADS was founded in 2024 with a simple belief: everyday style should be comfortable, sustainable, and made to last. We work directly with artisanal ateliers across India to bring you premium casual wear that combines thoughtful craftsmanship with contemporary design."
+      }
+    }
+  },
+  "order": ["about-us-page"]
+}

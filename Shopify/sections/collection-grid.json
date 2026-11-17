@@ -1,0 +1,31 @@
+{
+  "name": "Collection Grid",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "show_search": true,
+        "show_cart": true
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "show_view_all": true
+      }
+    },
+    "product-card": {
+      "type": "product-card",
+      "settings": {
+        "show_wishlist": true
+      }
+    },
+    "pagination": {
+      "type": "pagination"
+    }
+  },
+  "order": ["header", "collection-header", "product-card", "pagination"]
+}

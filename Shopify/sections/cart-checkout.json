@@ -1,0 +1,15 @@
+{
+  "name": "Cart Checkout",
+  "type": "section",
+  "max_items": 1,
+  "enabled": true,
+  "blocks": {
+    "cart-checkout": {
+      "type": "cart-checkout",
+      "settings": {
+        "button_label": "Check out"
+      }
+    }
+  },
+  "order": ["cart-checkout"]
+}
