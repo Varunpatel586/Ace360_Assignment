@@ -1,24 +1,51 @@
-/* Hero — EB Garamond 64px heading, 2 CTAs, wide image frame with floating badge. */
+/* Hero — 56px/96px section padding, 410px status pill, EB Garamond 64px, 1152px image card + trust ribbon. */
 
 .section {
-  padding: 40px var(--pad-container) var(--gap-section);
+  width: 100%;
+  padding: 56px 0 96px;
 }
 
 .inner {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 23.3px;
   max-width: 768px;
 }
 
+/* Background+Border pill from Figma */
+.eyebrowPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #f0eee8;
+  border: 1px solid rgba(216, 194, 187, 0.5);
+  border-radius: var(--radius-pill);
+}
+
+.eyebrowDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-brown);
+}
+
 .eyebrow {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--accent-brown);
-  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+  color: #5c6852;
 }
 
 .heading {
@@ -27,87 +54,141 @@
   letter-spacing: -1.28px;
   font-weight: 400;
   color: var(--text-dark);
-  margin-bottom: 24px;
 }
 
 .subheading {
+  max-width: 672px;
   font-size: 18px;
-  line-height: 29.25px;
+  line-height: 29px;
+  font-weight: 400;
   color: var(--text-medium);
-  margin-bottom: 32px;
-  max-width: 640px;
 }
 
 .ctas {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8.7px;
 }
 
 .primaryCta,
 .secondaryCta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  height: 48px;
-  padding: 0 28px;
+  justify-content: center;
   border-radius: var(--radius-pill);
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   letter-spacing: 0.56px;
 }
 
 .primaryCta {
+  height: 48px;
+  padding: 14px 32px;
+  gap: 8px;
   background: var(--button-brown);
-  color: var(--bg-offwhite);
-  box-shadow: var(--shadow-btn);
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.ctaText {
+  display: block;
 }
 
 .secondaryCta {
-  border: 1px solid var(--border-strong);
+  height: 50px;
+  padding: 14px 28px;
+  border: 1px solid rgba(216, 194, 187, 0.8);
   color: var(--text-dark);
 }
 
+/* Hero Primary Image Frame: #F6F3ED card, 16px top padding, 24px radius */
 .imageFrame {
   position: relative;
+  width: 100%;
   max-width: 1152px;
-  margin: 48px auto 0;
+  margin: 0 auto;
+  padding-top: 16px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(36, 38, 36, 0.08);
   border-radius: var(--radius-stage);
+  box-shadow: 0 2px 12px -2px rgba(50, 42, 38, 0.04);
   overflow: hidden;
 }
 
 .heroImage {
   width: 100%;
-  height: auto;
+  height: 620px;
+  object-fit: cover;
 }
 
+/* Floating Architectural Badge: 349×56 pill, blur, 33px offsets */
 .badge {
   position: absolute;
-  left: 32px;
-  bottom: 32px;
-  background: var(--badge-bg);
-  backdrop-filter: blur(6px);
-  border-radius: var(--radius-card);
-  padding: 16px 24px;
-  box-shadow: var(--shadow-card);
+  left: 33px;
+  bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(252, 249, 243, 0.9);
+  border: 1px solid rgba(36, 38, 36, 0.08);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 12px -2px rgba(50, 42, 38, 0.04);
 }
 
 .badgeLabel {
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--accent-brown);
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .badgeTitle {
-  font-family: var(--font-eb-garamond), Georgia, serif;
-  font-size: 18px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.72px;
   color: var(--text-dark);
+}
+
+/* Trust Metrics Ribbon: top border, 24px top padding, 3 equal cells */
+.trustRibbon {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(216, 194, 187, 0.4);
+}
+
+.trustItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+  color: var(--text-medium);
 }
 
 @media (max-width: 900px) {
   .section {
-    padding: 24px 24px var(--gap-section);
+    padding: 32px 0 64px;
+  }
+
+  .inner {
+    padding: 0 24px;
   }
 
   .heading {
@@ -116,9 +197,23 @@
     letter-spacing: -0.8px;
   }
 
+  .subheading {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .heroImage {
+    height: 320px;
+  }
+
   .badge {
     left: 16px;
     bottom: 16px;
     right: 16px;
+  }
+
+  .trustRibbon {
+    flex-direction: column;
+    padding-top: 20px;
   }
 }

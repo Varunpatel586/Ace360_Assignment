@@ -1,39 +1,69 @@
-/* Home page sections — collections grid. */
+/* Signature Collections: #F6F3ED band, 1px #D8C2BB 30% top/bottom borders, 80px vertical padding. */
 
 .collections {
-  padding: var(--gap-section) var(--pad-container);
+  width: 100%;
+  padding: 80px 0;
+  background: var(--bg-panel);
+  border-top: 1px solid rgba(216, 194, 187, 0.3);
+  border-bottom: 1px solid rgba(216, 194, 187, 0.3);
 }
 
 .collectionsHead {
+  width: 100%;
   max-width: 1280px;
-  margin: 0 auto var(--gap-section);
+  margin: 0 auto 56px;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+  margin-bottom: 11.5px;
 }
 
 .sectionHeading {
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.96px;
+  font-size: 44px;
+  line-height: 52px;
+  letter-spacing: -0.66px;
   font-weight: 400;
   color: var(--text-dark);
 }
 
 .sectionSub {
-  margin-top: 8px;
-  font-size: 16px;
-  color: var(--text-muted);
+  max-width: 448px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-medium);
 }
 
 .cardGrid {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-grid);
+  gap: 32px;
 }
 
 @media (max-width: 900px) {
   .collections {
-    padding: var(--gap-section) 24px;
+    padding: 48px 0;
+  }
+
+  .collectionsHead {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 24px;
+    margin-bottom: 32px;
   }
 
   .sectionHeading {
@@ -43,5 +73,6 @@
 
   .cardGrid {
     grid-template-columns: 1fr;
+    padding: 0 24px;
   }
 }

@@ -10,6 +10,7 @@ export type SeatingId = "two-seater" | "three-seater" | "l-shape";
 export interface ColourOption {
   id: ColourId;
   label: string;
+  shortLabel: string;
   hex: string;
 }
 
@@ -17,6 +18,8 @@ export interface FabricOption {
   id: FabricId;
   label: string;
   displayLabel: string;
+  description: string;
+  priceLabel: string;
   adjustment: number;
   summaryLabel: string;
 }
@@ -24,6 +27,8 @@ export interface FabricOption {
 export interface SeatingOption {
   id: SeatingId;
   label: string;
+  description: string;
+  priceLabel: string;
   adjustment: number;
   stageLabel: string;
 }
@@ -32,6 +37,7 @@ export interface SofaModel {
   id: ModelId;
   name: string;
   displayName: string;
+  shortDesc: string;
   basePrice: number;
   description: string;
   tag: string;
@@ -45,6 +51,7 @@ export const SOFA_MODELS: SofaModel[] = [
     id: "luna",
     name: "Luna",
     displayName: "The Luna Curved",
+    shortDesc: "Curved Boucle",
     basePrice: 42999,
     description:
       "Organic curved silhouette enveloped in soft, tactile boucle. Ideal for fluid, conversational open-plan spaces.",
@@ -52,16 +59,17 @@ export const SOFA_MODELS: SofaModel[] = [
     badges: ["Curved Silhouette", "High-Traffic Boucle", "Soft Density"],
     image: "/images/luna-sofa.png",
     colours: [
-      { id: "beige", label: "Warm Beige", hex: "#d9cfc0" },
-      { id: "charcoal", label: "Slate Charcoal", hex: "#4e5258" },
-      { id: "olive", label: "Olive Moss", hex: "#556346" },
-      { id: "midnight", label: "Midnight Blue", hex: "#283b4b" },
+      { id: "beige", label: "Warm Beige", shortLabel: "Warm Beige", hex: "#E4D8C5" },
+      { id: "charcoal", label: "Slate Charcoal", shortLabel: "Slate Charcoal", hex: "#4E5258" },
+      { id: "olive", label: "Olive Moss", shortLabel: "Olive Moss", hex: "#556346" },
+      { id: "midnight", label: "Midnight Blue", shortLabel: "Midnight Blue", hex: "#283B4B" },
     ],
   },
   {
     id: "urban",
     name: "Urban",
     displayName: "The Urban Mid-Century",
+    shortDesc: "Walnut Velvet",
     basePrice: 54999,
     description:
       "Mid-century clean lines with solid walnut trim and firm ergonomic support.",
@@ -69,16 +77,17 @@ export const SOFA_MODELS: SofaModel[] = [
     badges: ["Mid-Century Clean Lines", "Solid Walnut Trim", "Firm Ergonomic Support"],
     image: "/images/urban-sofa.png",
     colours: [
-      { id: "beige", label: "Warm Beige", hex: "#d9cfc0" },
-      { id: "charcoal", label: "Slate Charcoal", hex: "#4e5258" },
-      { id: "olive", label: "Olive Moss", hex: "#556346" },
-      { id: "midnight", label: "Midnight Blue", hex: "#283b4b" },
+      { id: "beige", label: "Warm Beige", shortLabel: "Warm Beige", hex: "#E4D8C5" },
+      { id: "charcoal", label: "Slate Charcoal", shortLabel: "Slate Charcoal", hex: "#4E5258" },
+      { id: "olive", label: "Olive Moss", shortLabel: "Olive Moss", hex: "#556346" },
+      { id: "midnight", label: "Midnight Blue", shortLabel: "Midnight Blue", hex: "#283B4B" },
     ],
   },
   {
     id: "cloud",
     name: "Cloud",
     displayName: "The Cloud Sectional",
+    shortDesc: "Deep Lounge",
     basePrice: 64999,
     description:
       "Deep lounge sanctuary with cloud softness and an L-shape ready footprint.",
@@ -86,10 +95,10 @@ export const SOFA_MODELS: SofaModel[] = [
     badges: ["Deep Sanctuary", "Cloud Softness", "L-Shape Ready"],
     image: "/images/cloud-sofa.png",
     colours: [
-      { id: "beige", label: "Warm Beige", hex: "#d9cfc0" },
-      { id: "charcoal", label: "Slate Charcoal", hex: "#4e5258" },
-      { id: "olive", label: "Olive Moss", hex: "#556346" },
-      { id: "midnight", label: "Midnight Blue", hex: "#283b4b" },
+      { id: "beige", label: "Warm Beige", shortLabel: "Warm Beige", hex: "#E4D8C5" },
+      { id: "charcoal", label: "Slate Charcoal", shortLabel: "Slate Charcoal", hex: "#4E5258" },
+      { id: "olive", label: "Olive Moss", shortLabel: "Olive Moss", hex: "#556346" },
+      { id: "midnight", label: "Midnight Blue", shortLabel: "Midnight Blue", hex: "#283B4B" },
     ],
   },
 ];
@@ -99,20 +108,26 @@ export const FABRICS: FabricOption[] = [
     id: "linen",
     label: "Natural Linen",
     displayLabel: "Natural Linen",
+    description: "Breathable Belgian weave · 50k Martindale rubs",
+    priceLabel: "Included",
     adjustment: 0,
     summaryLabel: "Included (+₹0)",
   },
   {
     id: "velvet",
-    label: "Matte Velvet",
-    displayLabel: "Matte Velvet",
+    label: "Royal Velvet",
+    displayLabel: "Royal Velvet",
+    description: "Dense cotton pile · deep pigment saturation",
+    priceLabel: "+₹5,000",
     adjustment: 5000,
     summaryLabel: "+₹5,000",
   },
   {
     id: "leatherette",
-    label: "Matte Vegan Leatherette",
-    displayLabel: "Matte Vegan Leatherette",
+    label: "Vegan Leatherette",
+    displayLabel: "Vegan Leatherette",
+    description: "Spill-resistant matte finish · pet friendly",
+    priceLabel: "+₹8,000",
     adjustment: 8000,
     summaryLabel: "+₹8,000",
   },
@@ -122,18 +137,24 @@ export const SEATING: SeatingOption[] = [
   {
     id: "two-seater",
     label: "2 Seater",
+    description: "Compact Apartment",
+    priceLabel: "−₹7,000",
     adjustment: -7000,
     stageLabel: "2 Seater Standard",
   },
   {
     id: "three-seater",
     label: "3 Seater",
+    description: "Standard Living",
+    priceLabel: "Included",
     adjustment: 0,
     stageLabel: "3 Seater Standard",
   },
   {
     id: "l-shape",
     label: "L Shape",
+    description: "Sectional Lounge",
+    priceLabel: "+₹18,000",
     adjustment: 18000,
     stageLabel: "L Shape Standard",
   },

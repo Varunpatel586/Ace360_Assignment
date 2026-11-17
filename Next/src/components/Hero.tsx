@@ -78,6 +78,7 @@ export default function Hero() {
           <span>10-Year Structural Warranty</span>
         </div>
       </div>
-    </section>
+    </div>
+    </section >
   );
 }

@@ -42,7 +42,13 @@ export default function SofaCard({ model, onCustomise }: SofaCardProps) {
           className={styles.cta}
           onClick={() => onCustomise(model.id)}
         >
-          Customise {model.name}
+          <span>Customise {model.name}</span>
+          <Image
+            src="/images/icon-arrow-sm.svg"
+            alt=""
+            width={10}
+            height={10}
+          />
         </button>
       </div>
     </article>

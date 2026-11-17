@@ -54,135 +54,242 @@ export default function SofaCustomiser({
 
   return (
     <section className={styles.section} id="customiser">
-      <div className={styles.headingRow}>
-        <h2 className={styles.heading}>Interactive Customiser</h2>
+      <div className={styles.header}>
+        <div className={styles.badgePill}>
+          <Image src="/images/icon-badge-5.svg" alt="" width={7} height={12} />
+          <span>Personalise Your Piece</span>
+        </div>
+        <h2 className={styles.heading}>Build Your Bespoke Sofa</h2>
         <p className={styles.subheading}>
-          Configure your sofa in four steps and watch the quote update live.
+          Four deliberate choices — silhouette, colour, fabric and footprint.
+          Every selection updates your live specification and artisan estimate
+          instantly.
         </p>
       </div>
 
       <div className={styles.grid}>
-        {/* LEFT: live preview stage */}
-        <div className={styles.stage}>
-          <Image
-            src={model.image}
-            alt={`${model.displayName} in ${colour?.label ?? "selected colour"}`}
-            width={1200}
-            height={900}
-            className={styles.stageImage}
-          />
-          <div className={styles.stageMeta}>
-            <span className={styles.stageTag}>{model.name} Model</span>
-            <span className={styles.stageMetaItem}>
-              {colour?.label ?? "—"}
-            </span>
-            <span className={styles.stageMetaItem}>{seating.stageLabel}</span>
-          </div>
-          <span className={styles.stageBadge}>360° Inspection Ready</span>
-        </div>
+        {/* LEFT COLUMN: stage card + price ribbon + artisan note */}
+        <div className={styles.leftCol}>
+          <div className={styles.stageCard}>
+            <div className={styles.stage}>
+              <Image
+                src={model.image}
+                alt={`Live customizer preview of ${model.displayName} in ${colour?.label ?? ""}`}
+                width={1044}
+                height={783}
+                className={styles.stageImage}
+              />
 
-        {/* RIGHT: 4-step engine */}
-        <div className={styles.panel}>
-          {/* STEP 01 — model */}
-          <div className={styles.step}>
-            <p className={styles.stepLabel}>STEP 01/04</p>
-            <h3 className={styles.stepHeading}>Choose Sofa Model</h3>
-            <div className={styles.optionList}>
-              {SOFA_MODELS.map((m) => (
-                <button
-                  key={m.id}
-                  type="button"
-                  className={`${styles.modelPill} ${
-                    m.id === config.modelId ? styles.selected : ""
-                  }`}
-                  onClick={() => setModel(m.id)}
-                >
-                  <span className={styles.modelName}>{m.name}</span>
-                  <span className={styles.modelPrice}>
-                    {formatPrice(m.basePrice)}
-                  </span>
-                </button>
-              ))}
+              <div className={styles.stageTags}>
+                <span className={styles.tagPill}>{model.name} Model</span>
+                <span className={styles.tagPill}>
+                  <span
+                    className={styles.tagDot}
+                    style={{ background: colour?.hex }}
+                  />
+                  {colour?.label}
+                </span>
+              </div>
+
+              <span className={`${styles.tagPill} ${styles.stageRight}`}>
+                {seating.stageLabel}
+              </span>
+
+              <div className={styles.stageBottom}>
+                <span className={styles.darkPill}>360° Inspection Ready</span>
+                <span className={styles.lightPill}>
+                  Ships in 6–8 Weeks
+                </span>
+              </div>
+            </div>
+
+            <div className={styles.priceRibbon}>
+              <div>
+                <p className={styles.ribbonLabel}>YOUR BESPOKE QUOTE</p>
+                <p className={styles.ribbonPrice}>
+                  {formatPrice(price.total)}
+                  <span className={styles.ribbonGst}>incl. GST</span>
+                </p>
+              </div>
+              <span className={styles.gstPill}>GST Compliant Invoice</span>
             </div>
           </div>
 
-          {/* STEP 02 — colour */}
+          <div className={styles.artisanNote}>
+            <Image src="/images/icon-badge-6.svg" alt="" width={15} height={19} />
+            <p>
+              Every frame is hand-built to order in our Bangalore and Mumbai
+              workshops. Configuration changes may adjust lead time by up to two
+              weeks.
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN: the 4-step engine */}
+        <div className={styles.panel}>
+          {/* STEP 1: MODEL SELECTION */}
           <div className={styles.step}>
-            <p className={styles.stepLabel}>STEP 02/04</p>
-            <h3 className={styles.stepHeading}>Choose Colour</h3>
+            <div className={styles.stepTop}>
+              <span className={styles.stepLabel}>Step 01</span>
+              <span className={styles.stepHint}>Base Architecture</span>
+            </div>
+            <h3 className={styles.stepHeading}>Choose Sofa Model</h3>
+            <div className={styles.modelRow}>
+              {SOFA_MODELS.map((m) => {
+                const active = m.id === config.modelId;
+                return (
+                  <button
+                    key={m.id}
+                    type="button"
+                    className={`${styles.modelCard} ${active ? styles.modelCardActive : ""
+                      }`}
+                    onClick={() => setModel(m.id)}
+                  >
+                    <span className={styles.modelTop}>
+                      <span className={styles.modelName}>{m.name}</span>
+                      {active && (
+                        <Image
+                          src="/images/icon-check.svg"
+                          alt=""
+                          width={13}
+                          height={13}
+                        />
+                      )}
+                    </span>
+                    <span className={styles.modelDesc}>
+                      {m.shortDesc}
+                    </span>
+                    <span className={styles.modelPrice}>
+                      {formatPrice(m.basePrice)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className={styles.separator} />
+
+          {/* STEP 2: FABRIC COLOUR */}
+          <div className={styles.step}>
+            <div className={styles.stepTop}>
+              <span className={styles.stepLabel}>Step 02</span>
+              <span className={styles.stepHint}>{colour?.label}</span>
+            </div>
+            <h3 className={styles.stepHeading}>Choose Fabric Colour</h3>
             <div className={styles.swatchRow}>
               {model.colours.map((c) => (
                 <button
                   key={c.id}
                   type="button"
-                  aria-label={c.label}
-                  title={c.label}
-                  className={`${styles.swatch} ${
-                    c.id === config.colourId ? styles.swatchSelected : ""
-                  }`}
-                  style={{ background: c.hex }}
+                  className={styles.swatchBtn}
+                  aria-pressed={c.id === config.colourId}
                   onClick={() => setColour(c.id)}
-                />
+                >
+                  <span
+                    className={`${styles.swatch} ${c.id === config.colourId ? styles.swatchSelected : ""
+                      }`}
+                    style={{ background: c.hex }}
+                  >
+                    {c.id === config.colourId && (
+                      <Image
+                        src="/images/icon-check.svg"
+                        alt=""
+                        width={9}
+                        height={7}
+                      />
+                    )}
+                  </span>
+                  <span className={styles.swatchLabel}>
+                    {c.shortLabel}
+                  </span>
+                </button>
               ))}
             </div>
-            <p className={styles.swatchName}>{colour?.label}</p>
           </div>
 
-          {/* STEP 03 — fabric */}
+          <div className={styles.separator} />
+
+          {/* STEP 3: FABRIC TYPE */}
           <div className={styles.step}>
-            <p className={styles.stepLabel}>STEP 03/04</p>
-            <h3 className={styles.stepHeading}>Material Tactility</h3>
+            <div className={styles.stepTop}>
+              <span className={styles.stepLabel}>Step 03</span>
+              <span className={styles.stepHint}>Material Tactility</span>
+            </div>
+            <h3 className={styles.stepHeading}>Choose Fabric Type</h3>
             <div className={styles.optionList}>
               {FABRICS.map((f) => (
                 <button
                   key={f.id}
                   type="button"
-                  className={`${styles.optionBtn} ${
-                    f.id === config.fabricId ? styles.selected : ""
-                  }`}
+                  className={`${styles.optionBtn} ${f.id === config.fabricId ? styles.optionActive : ""
+                    }`}
                   onClick={() => setFabric(f.id)}
                 >
-                  <span className={styles.modelName}>{f.displayLabel}</span>
-                  <span className={styles.modelPrice}>
-                    {formatAdjustment(f.adjustment)}
+                  <span
+                    className={`${styles.radio} ${f.id === config.fabricId ? styles.radioActive : ""
+                      }`}
+                  />
+                  <span className={styles.optionText}>
+                    <span className={styles.optionName}>{f.displayLabel}</span>
+                    <span className={styles.optionDesc}>{f.description}</span>
+                  </span>
+                  <span
+                    className={`${styles.optionPrice} ${f.id === config.fabricId ? "" : styles.optionPriceAlt
+                      }`}
+                  >
+                    {f.priceLabel}
                   </span>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* STEP 04 — seating */}
+          <div className={styles.separator} />
+
+          {/* STEP 4: SEATING CONFIGURATION */}
           <div className={styles.step}>
-            <p className={styles.stepLabel}>STEP 04/04</p>
-            <h3 className={styles.stepHeading}>Spatial Footprint</h3>
-            <div className={styles.optionList}>
+            <div className={styles.stepTop}>
+              <span className={styles.stepLabel}>Step 04</span>
+              <span className={styles.stepHint}>Spatial Footprint</span>
+            </div>
+            <h3 className={styles.stepHeading}>Choose Seating Configuration</h3>
+            <div className={styles.seatRow}>
               {SEATING.map((s) => (
                 <button
                   key={s.id}
                   type="button"
-                  className={`${styles.optionBtn} ${
-                    s.id === config.seatingId ? styles.selected : ""
-                  }`}
+                  className={`${styles.seatCard} ${s.id === config.seatingId ? styles.optionActive : ""
+                    }`}
                   onClick={() => setSeating(s.id)}
                 >
-                  <span className={styles.modelName}>{s.label}</span>
-                  <span className={styles.modelPrice}>
-                    {formatAdjustment(s.adjustment)}
+                  <span className={styles.optionName}>{s.label}</span>
+                  <span className={styles.optionDesc}>{s.description}</span>
+                  <span
+                    className={`${styles.seatPrice} ${s.adjustment < 0 ? styles.priceGreen : ""
+                      }`}
+                  >
+                    {s.priceLabel}
                   </span>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Price summary */}
+          {/* DYNAMIC SUMMARY BOX */}
           <div className={styles.summary}>
-            <div className={styles.summaryHeader}>
-              <span className={styles.liveBadge}>Live Quote</span>
-              <p className={styles.summaryConfig}>
-                The {model.name} · {colour?.label} · {fabric.displayLabel} ·{" "}
-                {seating.label}
-              </p>
+            <div className={styles.summaryTop}>
+              <span className={styles.summaryLabel}>Configuration Summary</span>
+              <span className={styles.summaryChip}>Live Estimate</span>
             </div>
+
+            <p className={styles.summaryString}>
+              The {model.name} · {colour?.label} · {fabric.displayLabel} ·{
+                " "
+              }
+              {seating.label}
+            </p>
+
             <dl className={styles.lineItems}>
               <div className={styles.line}>
                 <dt>Base Architecture ({model.name})</dt>
@@ -190,17 +297,27 @@ export default function SofaCustomiser({
               </div>
               <div className={styles.line}>
                 <dt>Fabric Tier ({fabric.displayLabel})</dt>
-                <dd>{formatAdjustment(price.fabricAdj)}</dd>
+                <dd>{formatPrice(price.fabricAdj)}</dd>
               </div>
               <div className={styles.line}>
                 <dt>Seating Configuration ({seating.label})</dt>
-                <dd>{formatAdjustment(price.seatingAdj)}</dd>
+                <dd>{formatPrice(price.seatingAdj)}</dd>
               </div>
               <div className={`${styles.line} ${styles.totalLine}`}>
-                <dt>Total</dt>
+                <dt>Total Estimate (incl. GST)</dt>
                 <dd>{formatPrice(price.total)}</dd>
               </div>
             </dl>
+
+            <a href="#enquiry" className={styles.syncCta}>
+              Sync Selection to Enquiry Form
+              <Image
+                src="/images/icon-arrow-sm.svg"
+                alt=""
+                width={9}
+                height={9}
+              />
+            </a>
           </div>
         </div>
       </div>

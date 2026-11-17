@@ -37,7 +37,10 @@ export default function Home() {
 
         <section className={styles.collections} id="collections">
           <div className={styles.collectionsHead}>
-            <h2 className={styles.sectionHeading}>Signature Collections</h2>
+            <div>
+              <p className={styles.eyebrow}>Foundational Silhouettes</p>
+              <h2 className={styles.sectionHeading}>Signature Collections</h2>
+            </div>
             <p className={styles.sectionSub}>
               Explore our foundational silhouettes, engineered for ergonomic
               posture and architectural presence.
