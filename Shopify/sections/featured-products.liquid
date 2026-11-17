@@ -1,0 +1,184 @@
+<section class="featured-products">
+  <div class="container">
+    <div class="section-head-row">
+      <div class="section-head-row__left">
+        <span class="section-eyebrow">CATALOG DIRECTORY</span>
+        <h2 class="section-main-heading">{{ section.settings.heading | default: 'FEATURED ESSENTIALS' }}</h2>
+      </div>
+      <div class="filter-chips-row">
+        <button class="filter-chip filter-chip--active">ALL (6)</button>
+        <button class="filter-chip filter-chip--inactive">MEN</button>
+        <button class="filter-chip filter-chip--inactive">WOMEN</button>
+      </div>
+    </div>
+
+    <!-- Product Grid: 6 Items from Figma Catalog -->
+    <div class="catalog-products-grid">
+      <!-- Product 1: Men's Classic Cotton T-Shirt -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <span class="figma-product-card__badge figma-product-card__badge--bestseller">BEST SELLER</span>
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Men's Casual</span>
+            <span class="figma-product-card__sku">SKU: MTS001</span>
+          </div>
+          <h3 class="figma-product-card__title">Men's Classic Cotton T-Shirt</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹699</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#000000;" title="Black"></span>
+              <span class="swatch-circle" style="background:#FFFFFF;" title="White"></span>
+              <span class="swatch-circle" style="background:#18233C;" title="Navy Blue"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2: Women's Essential T-Shirt -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <span class="figma-product-card__badge figma-product-card__badge--popular">POPULAR</span>
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Women's Basics</span>
+            <span class="figma-product-card__sku">SKU: WTS001</span>
+          </div>
+          <h3 class="figma-product-card__title">Women's Essential T-Shirt</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹599</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#FFFFFF;" title="White"></span>
+              <span class="swatch-circle" style="background:#000000;" title="Black"></span>
+              <span class="swatch-circle" style="background:#E8A598;" title="Pink"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3: Men's Oversized T-Shirt -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <span class="figma-product-card__badge figma-product-card__badge--trending">TRENDING</span>
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Men's Streetwear</span>
+            <span class="figma-product-card__sku">SKU: MTS002</span>
+          </div>
+          <h3 class="figma-product-card__title">Men's Oversized T-Shirt</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹899</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#D7C9B1;" title="Beige"></span>
+              <span class="swatch-circle" style="background:#000000;" title="Black"></span>
+              <span class="swatch-circle" style="background:#525946;" title="Olive"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4: Women's High-Waist Jeans -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <span class="figma-product-card__badge figma-product-card__badge--popular">POPULAR</span>
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Women's Denim</span>
+            <span class="figma-product-card__sku">SKU: WJN001</span>
+          </div>
+          <h3 class="figma-product-card__title">Women's High-Waist Jeans</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹1,499</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#8EB1D4;" title="Light Blue"></span>
+              <span class="swatch-circle" style="background:#203657;" title="Dark Blue"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 5: Men's Slim-Fit Jeans -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Men's Denim</span>
+            <span class="figma-product-card__sku">SKU: MJN001</span>
+          </div>
+          <h3 class="figma-product-card__title">Men's Slim-Fit Jeans</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹1,499</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#8EB1D4;" title="Light Blue"></span>
+              <span class="swatch-circle" style="background:#203657;" title="Dark Blue"></span>
+              <span class="swatch-circle" style="background:#000000;" title="Black"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 6: Women's Striped Casual Shirt -->
+      <article class="figma-product-card">
+        <div class="figma-product-card__visual">
+          <button class="figma-product-card__wishlist" aria-label="Add to Wishlist">
+            <svg width="15" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <div class="figma-product-card__placeholder">Product Visual</div>
+        </div>
+        <div class="figma-product-card__info">
+          <div class="figma-product-card__meta-row">
+            <span class="figma-product-card__category">Women's Tops</span>
+            <span class="figma-product-card__sku">SKU: WSH001</span>
+          </div>
+          <h3 class="figma-product-card__title">Women's Striped Casual Shirt</h3>
+          <div class="figma-product-card__bottom-row">
+            <span class="figma-product-card__price">₹1,099</span>
+            <div class="figma-product-card__swatches">
+              <span class="swatch-circle" style="background:#A2C1DE;" title="Blue Stripe"></span>
+              <span class="swatch-circle" style="background:#E8B5BF;" title="Pink Stripe"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog-cta-wrap">
+      <a href="/collections/all" class="btn-catalog-view">VIEW COMPLETE 2024 CATALOG (42 ITEMS)</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "FEATURED ESSENTIALS" }
+  ],
+  "presets": [{ "name": "Featured Products" }]
+}
+{% endschema %}

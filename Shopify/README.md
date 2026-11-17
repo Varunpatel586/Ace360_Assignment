@@ -1,5 +1,6 @@
 # URBAN THREADS — Shopify Theme (Fashion Store)
 
+**Live Store URL:** [https://wxj0dm-yh.myshopify.com/](https://wxj0dm-yh.myshopify.com/)  
 **Figma source:** Ace Assignment — Page 3, Frame `Shopify` (`1006:4`, 1280 × 4595)
 
 A 1:1 recreation of the URBAN THREADS fashion store homepage using a Shopify theme (Liquid, sections, snippets, JSON templates, CSS, minimal JS). No custom backend, no apps, no custom API work.

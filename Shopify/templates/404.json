@@ -1,24 +1,12 @@
 {
   "name": "404",
   "sections": {
-    "header": {
-      "type": "header",
-      "blocks": {
-        "header": {
-          "type": "header",
-          "settings": {
-            "show_search": true,
-            "show_cart": true
-          }
-        }
-      },
-      "settings": {}
-    },
-    "page": {
-      "type": "page",
+    "main-404": {
+      "type": "featured-products",
       "settings": {
-        "title": "Page not found"
+        "heading": "PAGE NOT FOUND"
       }
     }
-  }
+  },
+  "order": ["main-404"]
 }

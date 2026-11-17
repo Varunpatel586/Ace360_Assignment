@@ -1,0 +1,80 @@
+<section class="social-proof-section">
+  <div class="container">
+    <div class="social-proof-header">
+      <div class="stars-row">
+        {% for i in (1..5) %}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        {% endfor %}
+      </div>
+      <h2 class="social-proof-title">OVER 12,000+ WARDROBES ELEVATED</h2>
+      <p class="social-proof-sub">Engineered silhouettes that survive real-world daily wear.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-card__stars">
+          {% for i in (1..5) %}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          {% endfor %}
+        </div>
+        <p class="review-card__quote">
+          "The 240 GSM weight on the Oversized T-Shirt is genuinely rare at this price point. Clean neckline that doesn't fray after 10 washes."
+        </p>
+        <div class="review-card__author-row">
+          <div>
+            <div class="review-card__author-name">Aditya R.</div>
+            <div class="review-card__author-meta">Verified Buyer • Mumbai</div>
+          </div>
+          <span class="review-card__verified">VERIFIED</span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="review-card__stars">
+          {% for i in (1..5) %}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          {% endfor %}
+        </div>
+        <p class="review-card__quote">
+          "Finally found jeans that fit Indian hip-to-waist proportions without gaping at the back. Delivered to Bangalore in under 48 hours."
+        </p>
+        <div class="review-card__author-row">
+          <div>
+            <div class="review-card__author-name">Sneha M.</div>
+            <div class="review-card__author-meta">Verified Buyer • Bangalore</div>
+          </div>
+          <span class="review-card__verified">VERIFIED</span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-card__stars">
+          {% for i in (1..5) %}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          {% endfor %}
+        </div>
+        <p class="review-card__quote">
+          "Understated luxury is the right descriptor. No loud logos, just architectural silhouettes and premium cotton feel. Highly recommended."
+        </p>
+        <div class="review-card__author-row">
+          <div>
+            <div class="review-card__author-name">Kabir S.</div>
+            <div class="review-card__author-meta">Verified Buyer • Delhi NCR</div>
+          </div>
+          <span class="review-card__verified">VERIFIED</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social Proof",
+  "settings": [],
+  "presets": [{ "name": "Social Proof" }]
+}
+{% endschema %}

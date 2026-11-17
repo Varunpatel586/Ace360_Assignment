@@ -1,66 +1,12 @@
 {
   "name": "Product",
-  "layout": "full-width",
   "sections": {
-    "header": {
-      "type": "header",
-      "blocks": {
-        "header": {
-          "type": "header",
-          "settings": {
-            "show_search": true,
-            "show_cart": true
-          }
-        }
-      },
-      "settings": {}
-    },
-    "product-information": {
-      "type": "product-information",
-      "blocks": {
-        "quantity": {
-          "type": "quantity"
-        },
-        "buy-now": {
-          "type": "buy-now"
-        },
-        "variant-picker": {
-          "type": "variant-picker"
-        },
-        "color-swatch": {
-          "type": "color-swatch"
-        },
-        "size-picker": {
-          "type": "size-picker"
-        },
-        "sku": {
-          "type": "sku"
-        },
-        "share": {
-          "type": "share"
-        },
-        "wishlist": {
-          "type": "wishlist"
-        }
-      },
+    "products": {
+      "type": "featured-products",
       "settings": {
-        "show_sKU": true,
-        "show_color_swatches": true,
-        "show_size_select": true,
-        "show_wishlist": true,
-        "show_compare_at_price": true,
-        "show_price": true,
-        "show_quantity_selector": true,
-        "show_add_to_cart_button": true,
-        "show_share": false
-      },
-      "order": ["quantity", "buy-now", "variant-picker", "color-swatch", "size-picker", "sku", "share", "wishlist"]
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You May Also Like"
+        "heading": "PRODUCT DETAILS"
       }
     }
-  }
+  },
+  "order": ["products"]
 }

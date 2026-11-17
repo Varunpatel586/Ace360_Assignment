@@ -1,20 +1,9 @@
 {
   "name": "Page",
-  "layout": "full-width",
   "sections": {
-    "header": {
-      "type": "header",
-      "blocks": {
-        "header": {
-          "type": "header",
-          "settings": {
-            "show_search": true,
-            "show_cart": true
-          }
-        }
-      },
-      "settings": {}
-    },
-    "page": {}
-  }
+    "hero": {
+      "type": "hero-banner"
+    }
+  },
+  "order": ["hero"]
 }

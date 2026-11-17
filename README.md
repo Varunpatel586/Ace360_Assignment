@@ -10,7 +10,7 @@ Five small frontend projects rebuilt as a 1:1 recreation of the **"Ace Assignmen
 | `Laravel/` | Product Admin Dashboard | Laravel, Blade, MySQL | Product CRUD dashboard with search, filters, sorting, pagination |
 | `Next/` | SOFALIVING Sofa Customiser | Next.js (App Router), TypeScript, CSS | Sofa customiser: model/colour/fabric/seating controls, price summary, enquiry form |
 | `Flutter/` | SOFALIVING Mobile Shopping App | Flutter + Provider | Mobile shopping app: home, listing, details, wishlist, cart, checkout, confirmation |
-| `Shopify/` | URBAN THREADS Fashion Store | Shopify theme (Liquid) | Theme: home, collections (Men, Women, T-Shirts, Jeans, Shirts), product, cart, policy pages |
+| `Shopify/` | URBAN THREADS Fashion Store | Shopify theme (Liquid) | Theme: home, collections (Men, Women, T-Shirts, Jeans, Shirts), product, cart, policy pages. Live store: [https://wxj0dm-yh.myshopify.com/](https://wxj0dm-yh.myshopify.com/) |
 
 ## How to run each project
 

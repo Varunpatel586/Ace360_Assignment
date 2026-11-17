@@ -1,0 +1,76 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__cols-grid">
+      <!-- Column 1: Brand & Newsletter -->
+      <div class="site-footer__brand-col">
+        <h3 class="site-footer__logo">URBAN THREADS</h3>
+        <p class="site-footer__tagline">
+          Architectural daily wardrobe essentials engineered for Indian weather and modern proportions.
+        </p>
+        <div class="newsletter-box">
+          <span class="newsletter-box__label">GET 10% OFF YOUR FIRST ORDER</span>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" class="newsletter-form__input" placeholder="Enter your email" required>
+            <button type="submit" class="newsletter-form__btn">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Column 2: Customer Care -->
+      <div>
+        <h4 class="site-footer__col-heading">Customer Care</h4>
+        <ul class="site-footer__links-list">
+          <li><a href="/pages/shipping-policy">Shipping Policy</a></li>
+          <li><a href="/pages/return-policy">Return Policy</a></li>
+          <li><a href="/pages/track-order">Track Order</a></li>
+          <li><a href="/pages/contact-us">Customer Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div>
+        <h4 class="site-footer__col-heading">Company</h4>
+        <ul class="site-footer__links-list">
+          <li><a href="/pages/about-us">About Us</a></li>
+          <li><a href="/pages/sustainability">Sustainability</a></li>
+          <li><a href="/pages/terms">Terms &amp; Conditions</a></li>
+          <li><a href="/pages/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Secure Payments -->
+      <div>
+        <h4 class="site-footer__col-heading">Secure Payments</h4>
+        <p style="font-family: var(--font-body); font-size: 14px; line-height: 20px; color: var(--color-text-body); margin-bottom: 12px;">
+          Encrypted 256-bit checkout supporting Indian payment networks.
+        </p>
+        <div class="payment-badges-wrap">
+          <span class="payment-badge">UPI</span>
+          <span class="payment-badge">CARDS</span>
+          <span class="payment-badge">NET BANKING</span>
+          <span class="payment-badge">COD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Separation -->
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">
+        &copy; {{ 'now' | date: '%Y' }} URBAN THREADS Apparel Pvt Ltd. All rights reserved.
+      </p>
+      <div class="site-footer__legal-links">
+        <a href="/pages/shipping-policy">Shipping Policy</a>
+        <a href="/pages/return-policy">Return Policy</a>
+        <a href="/pages/terms">Terms &amp; Conditions</a>
+        <a href="/pages/privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

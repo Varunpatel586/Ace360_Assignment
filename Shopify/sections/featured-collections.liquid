@@ -1,0 +1,83 @@
+<section class="featured-collections">
+  <div class="container">
+    <div class="section-head-row">
+      <div class="section-head-row__left">
+        <span class="section-eyebrow">CURATED DIRECTORIES</span>
+        <h2 class="section-main-heading">{{ section.settings.heading | default: 'FEATURED COLLECTIONS' }}</h2>
+      </div>
+      <div class="section-head-row__desc">
+        Architectural wardrobe foundations engineered for relaxed silhouette and climate comfort.
+      </div>
+    </div>
+
+    <div class="collections-bento-grid">
+      <!-- Collection 1: Men's -->
+      <a href="/collections/men" class="bento-collection-card">
+        <div class="bento-collection-card__bg"></div>
+        <div class="bento-collection-card__overlay"></div>
+        <div class="bento-collection-card__content">
+          <span class="bento-collection-card__sub">T-SHIRTS • JEANS • SHIRTS</span>
+          <h3 class="bento-collection-card__title">Men's Collection</h3>
+          <span class="bento-collection-card__link">
+            Explore Catalog
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Collection 2: Women's -->
+      <a href="/collections/women" class="bento-collection-card">
+        <div class="bento-collection-card__bg"></div>
+        <div class="bento-collection-card__overlay"></div>
+        <div class="bento-collection-card__content">
+          <span class="bento-collection-card__sub">T-SHIRTS • JEANS • SHIRTS</span>
+          <h3 class="bento-collection-card__title">Women's Collection</h3>
+          <span class="bento-collection-card__link">
+            Explore Catalog
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Collection 3: New Arrivals -->
+      <a href="/collections/new-arrivals" class="bento-collection-card">
+        <div class="bento-collection-card__bg"></div>
+        <div class="bento-collection-card__overlay"></div>
+        <span class="bento-collection-card__tag bento-collection-card__tag--accent">NEW RELEASE</span>
+        <div class="bento-collection-card__content">
+          <span class="bento-collection-card__sub">SUMMER RELEASES</span>
+          <h3 class="bento-collection-card__title">New Arrivals</h3>
+          <span class="bento-collection-card__link">
+            Shop Drop
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Collection 4: Best Sellers -->
+      <a href="/collections/best-sellers" class="bento-collection-card">
+        <div class="bento-collection-card__bg"></div>
+        <div class="bento-collection-card__overlay"></div>
+        <span class="bento-collection-card__tag bento-collection-card__tag--white">PROVEN FITS</span>
+        <div class="bento-collection-card__content">
+          <span class="bento-collection-card__sub">COMMUNITY FAVORITES</span>
+          <h3 class="bento-collection-card__title">Best Sellers</h3>
+          <span class="bento-collection-card__link">
+            View All
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "FEATURED COLLECTIONS" }
+  ],
+  "presets": [{ "name": "Featured Collections" }]
+}
+{% endschema %}
