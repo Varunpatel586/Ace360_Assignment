@@ -68,3 +68,7 @@ config/settings_data.json
 .sass-cache/
 *.tgz
 *.tar.gz
+
+*.Freebuff
+*.freebuff
+.freebuff/

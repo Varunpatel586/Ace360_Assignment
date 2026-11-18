@@ -129,10 +129,10 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `sku`, `price`, `sale_price
   (22, 2, 'Smart Fitness Band', 'ELE-BND-902', 69, NULL, 44, 15, 9, 45, 'active', 'AMOLED fitness tracker with heart-rate,SpO2 and 14-day battery.', NULL, '2026-06-28 14:16:12', '2026-06-28 14:16:12'),
   (23, 4, 'Canvas Tote Bag', 'ACC-TOT-019', 22, NULL, 188, 30, 5, 80, 'active', 'Heavy cotton canvas tote with an internal zip pocket and reinforced handles.', NULL, '2026-06-26 14:16:12', '2026-06-26 14:16:12'),
   (24, 4, 'Minimalist Leather Wallet', 'ACC-WLT-077', 49, NULL, 66, 12, 7, 35, 'active', 'Slim bifold wallet in vegetable-tanned leather with RFID shielding.', NULL, '2026-06-24 14:16:12', '2026-06-24 14:16:12'),
-  (25, 4, 'Polarized Sunglasses', 'ACC-SUN-145', 89, NULL, 23, 10, 8, 25, 'active', 'Acetate frames with polarized CR-39 lenses and UV400 protection.', NULL, '2026-06-22 14:16:12', '2026-06-22 14:16:12'),
   (26, 4, 'Wool Beanie', 'ACC-BNE-260', 26, NULL, 91, 20, 6, 50, 'active', 'Rib-knit lambswool beanie with a folded cuff.', NULL, '2026-06-20 14:16:12', '2026-06-20 14:16:12'),
   (27, 4, 'Corduroy Cap', 'ACC-CAP-311', 31, NULL, 0, 10, 9, 30, 'inactive', 'Six-panel corduroy cap with an adjustable brass strap.', NULL, '2026-06-18 14:16:12', '2026-06-18 14:16:12'),
-  (28, 1, 'Cotton Lounge Pants', 'APP-PNT-402', 44, NULL, 57, 12, 7, 40, 'draft', 'Brushed cotton jersey pants with an elastic drawcord waist.', NULL, '2026-06-16 14:16:12', '2026-06-16 14:16:12');
+  (28, 1, 'Cotton Lounge Pants', 'APP-PNT-402', 44, NULL, 57, 12, 7, 40, 'draft', 'Brushed cotton jersey pants with an elastic drawcord waist.', NULL, '2026-06-16 14:16:12', '2026-06-16 14:16:12'),
+  (30, 1, 'hat', 'SKU-SJV-1257', 55, NULL, 155, 14, 5, 50, 'active', 'hattttttt', NULL, '2026-11-17 14:20:34', '2026-11-17 14:20:34');
 
 -- ----------------------------------------------------------------------------
 -- demo data: channels
